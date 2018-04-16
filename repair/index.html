@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/main.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Roboto" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <title>Полевской-Автосервис-Repair</title>
+  </head>
+  <body>
+    <section class="modal-windows">
+      <div class="modal fade bd-example-modal-sm" id="modal911" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content backcall">
+            <div class="modal-body">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">×</span></button><br>
+              <div class="row justify-content-center">
+                <div class="col-7">
+                  <form id="callback-form" method="POST" autocomplete="off">
+                    <h6 class="callback-form__title">Укажите ваши данные, и мы сразу вам перезвоним!</h6>
+                    <h5 class="callback-form__message"></h5><br>
+                    <input class="backcall_input form-control form-control-lg form-input__name" name="name" type="text" tabindex="0" placeholder="Введите ваше имя" required=""><br>
+                    <input class="backcall_input form-control form-control-lg form-input__phone" id="phone2" name="phone" type="tel" tabindex="0" placeholder="Введите ваш телефон" required=""><br>
+                    <button class="btn btn-block btn-danger btn-lg text-uppercase" type="submit" value="Отправить">Жду звонка!</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-price-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="container">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">×</span></button>
+              <h2 class="text-center">Цены основных услуг</h2>
+              <p class="lead text-center">Узнать точную стоимость обслуживания и записаться вы можете по телефону</p>
+              <h5 class="text-center"><img class="icon" src="assets/styles/img/icon/phone.svg" alt="phone"><a href="tel:+7(952)131-810-3">+7(952)131-810-3</a>
+              </h5>
+              <nav>
+                <div class="nav nav-pills justify-content-around flex-column flex-sm-row" id="nav-tab" role="tablist"><a class="nav-item nav-link bg-secondary text-white m-1 active" id="nav-dvs-tab" data-toggle="tab" href="#nav-dvs" role="tab" aria-controls="nav-dvs" aria-selected="true">Ремонт ДВС</a><a class="nav-item nav-link bg-secondary text-white m-1" id="nav-suspension-tab" data-toggle="tab" href="#nav-suspension" role="tab" aria-controls="nav-suspension" aria-selected="false">Ходовая,подвеска</a><a class="nav-item nav-link bg-secondary text-white m-1" id="nav-teh-tab" data-toggle="tab" href="#nav-teh" role="tab" aria-controls="nav-teh" aria-selected="false">Тех.обслуживание</a></div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-dvs" role="tabpanel" aria-labelledby="nav-dvs-tab">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Услуга</th>
+                        <th scope="col">Стоимость работы (условно)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Диагностика двигателя</th>
+                        <td>от 400 руб</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">КАПИТАЛЬНЫЙ РЕМОНТ ДВИГАТЕЛЯ</th>
+                        <td>от 15 000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ЦЕПИ ГРМ</th>
+                        <td>от 5000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РЕМНЯ ГРМ с роликами</th>
+                        <td>от 2500р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РЕМНЯ НАВЕСНОГО ОБОРУДОВАНИЯ</th>
+                        <td>500 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Снятие и установка АКПП</th>
+                        <td>5000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Снятие и установка МКПП</th>
+                        <td>от 3000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена СЦЕПЛЕНИЯ</th>
+                        <td>от 3500 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена СТАРТЕРА</th>
+                        <td>от 300 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ГЕНЕРАТОРА</th>
+                        <td>от 700 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ПРОКЛАДКИ КЛАПАННОЙ КРЫШКИ</th>
+                        <td>500 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ПРОКЛАДКИ ГБЦ</th>
+                        <td>от 4000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена заднего САЛЬНИКА КОЛЕНВАЛА</th>
+                        <td>от 4000 р</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="nav-suspension" role="tabpanel" aria-labelledby="nav-suspension-tab">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Услуга</th>
+                        <th scope="col">Стоимость работы (условно)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Диагностика ходовой части</th>
+                        <td>400 руб</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена АМОРТИЗАТОРА</th>
+                        <td>от 800 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ШАРОВОЙ ОПОРЫ АМОРТИЗАТОРА</th>
+                        <td>1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ПРУЖИНЫ</th>
+                        <td>от 800 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РУЛЕВОГО НАКОНЕЧНИКА</th>
+                        <td>300 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РУЛЕВОЙ ТЯГИ</th>
+                        <td>от 700р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РУЛЕВОЙ РЕЙКИ</th>
+                        <td>от 1500 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Снятие и установка ПОВОРОТНОГО КУЛАКА</th>
+                        <td>от 1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена САЙЛЕНТБЛОКА</th>
+                        <td>от 300 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РЫЧАГА ПОДВЕСКИ</th>
+                        <td>от 800 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена СТУПИЦЫ</th>
+                        <td>от 900 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена СТУПИЧНОГО ПОДШИПНИКА</th>
+                        <td>1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ПРИВОДА</th>
+                        <td>1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ШРУСА</th>
+                        <td>от 1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена СТАБИЛИЗАТОРА</th>
+                        <td>от 1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ТЯГИ СТАБИЛИЗАТОРА</th>
+                        <td>от 350 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ТОРМОЗНЫХ ДИСКОВ (2шт)</th>
+                        <td>1000 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена КОЛОДОК (1 ось)</th>
+                        <td>от 600 р</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="nav-teh" role="tabpanel" aria-labelledby="nav-teh-tab">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Услуга</th>
+                        <th scope="col">Стоимость работы (условно)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Промывка ИНЖЕКТОРА</th>
+                        <td>2200 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена МАСЛА В ДВС</th>
+                        <td>400 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена МАСЛА В АКПП</th>
+                        <td>от 500 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена МАСЛА ГУРа</th>
+                        <td>от 600 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена АНТИФРИЗА</th>
+                        <td>от 600 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ТОРМОЗНОЙ ЖИДКОСТИ</th>
+                        <td>500 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ВОЗДУШНОГО ФИЛЬТРА</th>
+                        <td>от 200 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена ТОПЛИВНОГО ФИЛЬТРА</th>
+                        <td>от 300 р</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Замена РАДИАТОРА ОХЛАЖДЕНИЯ</th>
+                        <td>от 1500 р</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm d-none d-md-block text-center contact-banner__item"><img class="icon" src="assets/styles/img/icon/phone.svg" alt="phone"><a href="tel:+7(952)131-810-3">+7(952)131-810-3</a>
+          </div>
+          <div class="col-sm text-center contact-banner__item"><img class="icon" src="assets/styles/img/icon/phone.svg" alt="phone"><a href="tel:+7(952)131-810-3">+7(952)131-810-3</a>
+          </div>
+          <div class="col-sm d-none d-sm-block text-center contact-banner__item"><img class="icon" src="assets/styles/img/icon/phone.svg" alt="phone"><a href="tel:+7(952)131-810-3">+7(952)131-810-3</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="header">
+      <div class="container text-center"><img class="header__logo" src="assets/styles/img/head_logo.png">
+        <div class="header__text">
+          <h1>Автосервис-Полевской!</h1>
+          <p>Работаем быстро весело траливали ёлыпалы драмчик.</p><a class="btn btn-sm btn-success" href="#" role="button" data-toggle="modal" data-target="#modal911"><img class="mr-1" src="assets/styles/img/icon/btn_phone.svg" alt="phone">Закажите звонок</a>
+        </div>
+      </div>
+    </section>
+    <section class="models">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md models-col"><img class="models__img" src="assets/styles/img/models/bmw.png">
+            <h2>Bmw</h2>
+          </div>
+          <div class="col-sm-6 d-none d-md-block col-md models-col"><img class="models__img" src="assets/styles/img/models/ford.png">
+            <h2>Ford</h2>
+          </div>
+          <div class="col-sm-6 d-none d-md-block col-md models-col"><img class="models__img" src="assets/styles/img/models/opel.png">
+            <h2>Opel</h2>
+          </div>
+          <div class="col-sm-6 d-none d-md-block col-md models-col"><img class="models__img" src="assets/styles/img/models/shevrolet.png">
+            <h2>Shevrolet</h2>
+          </div>
+          <div class="col-6 col-sm-6 col-md models-col"><img class="models__img" src="assets/styles/img/models/vaz.png">
+            <h2>Lada</h2>
+          </div>
+        </div>
+        <h5>Производим ремонт всех марок автомобилей! Просто свяжитесь с нами</h5>
+      </div>
+    </section>
+    <section class="content-info">
+      <div class="container">
+        <h1 class="text-center">Автосервис "Repair"</h1>
+        <div class="row">
+          <div class="col-sm content-info__left">
+            <ul class="text-uppercase font-weight-bold list-unstyled">
+              <li><img class="icon" src="assets/styles/img/icon/cog.svg" alt="phone">ремонт двигателей и КПП;</li>
+              <li><img class="icon" src="assets/styles/img/icon/cog.svg" alt="phone">ремонт ходовой части;</li>
+              <li><img class="icon" src="assets/styles/img/icon/cog.svg" alt="phone">диагностика и ТО;</li>
+              <li><img class="icon" src="assets/styles/img/icon/cog.svg" alt="phone">замена масел и расходных комплектующих;</li>
+            </ul>
+          </div>
+          <div class="col-sm d-none d-md-block content-info__right">
+            <p class="lead text-justify">
+              Наша главная цель - качество выполняемого ремонта, мы обращаем внимание на любые мелочи которые могут привести
+              | к потенциальной поломке вашего автомобиля.
+            </p>
+            <p class="lead text-justify">
+              Предоставляем гарантию нашей работы, всегда окажем помощь.
+              Мы всегда с радостью знакомимся с новыми клиентами и становимся хорошими друзьями.
+            </p>
+          </div>
+        </div>
+        <div class="content-info__bottom text-center">
+          <p>
+            Планируете дальнюю поездку? или имеются какие то проблемы с автомобилем?
+            Пройдите диагностику ходовой части и двигателя, и будте спокойны что ваш автомобиль вас не подведёт!
+          </p>
+          <button class="btn btn-dark btn-lg" type="button" data-toggle="modal" data-target=".bd-price-modal-lg">Цены основных услуг</button>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="carousel slide" id="carouselRepairs" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+              <li class="active" data-target="#carouselRepairs" data-slide-to="0"></li>
+              <li data-target="#carouselRepairs" data-slide-to="1"></li>
+              <li data-target="#carouselRepairs" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 pt-2 text-center"><img class="img-circle" src="https://scontent-arn2-1.cdninstagram.com/vp/7cb3a439f6c3ecdaa1381ef2ff25d97b/5B6A54E0/t51.2885-19/s150x150/22710848_282323198838713_7051462823943077888_n.jpg" style="width: 100px;height:100px;"></div>
+                    <div class="col-sm-9">
+                      <p>
+                        Очеееень классные ребята!!! быстренько починили.. Всё было великолепно, профессионалы
+                        своего дела, толковые, советую!
+                      </p><small>Сана кореш</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 pt-2 text-center"><img class="img-circle" src="https://scontent-arn2-1.cdninstagram.com/vp/6b27dc37fef41e2f0f908e0d8e14e567/5B600986/t51.2885-19/s150x150/12106184_765902533535193_2120491267_a.jpg" style="width: 100px;height:100px;"></div>
+                    <div class="col-sm-9">
+                      <p>Ребята молодцы, чинили мне приору..</p><small>Андрей</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 pt-2 text-center"><img class="img-circle" src="https://scontent-arn2-1.cdninstagram.com/vp/d71c9619d432fcbeb3e59bcdea61a384/5B5D8A72/t51.2885-19/s150x150/26867546_155912821731521_2506975013425381376_n.jpg" style="width: 100px;height:100px;"></div>
+                    <div class="col-sm-9">
+                      <p>Урааа!! оживили мою ваз 2115, у них подвеску перебирал.</p><small>Дмитрий</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 pt-2 text-center"><img class="img-circle" src="https://scontent-arn2-1.cdninstagram.com/vp/ecd0502f3928dd2cafe49d3200b07bfd/5B560421/t51.2885-19/s150x150/25021878_844316882396278_2393510262456975360_n.jpg" style="width: 100px;height:100px;"></div>
+                    <div class="col-sm-9">
+                      <p>выавыавыпывп</p><small>Петя</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+            </div><a class="carousel-control-prev" href="#carouselRepairs" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselRepairs" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 mb-4 mb-lg-0">
+            <div class="text-left text-white">
+              <h5 class="text-uppercase"><img class="mr-2 align-bottom" src="assets/styles/img/icon/contact.svg" alt="phone">Контакты</h5>
+              <p><strong><em>Адрес:</em></strong><br><em> г.Полевской,</em><br><em>ул. Машиностроителей1111, д. 45а лит Б.<br></em><em>Мы работаем без выходных!</em><br><em> с 10:00 до 21:00</em></p>
+              <div class="d-inline-flex align-items-center">
+                <p class="mr-2"><strong><em>Для вас:</em></strong></p>
+                <div class="services-baner__item mr-1"><img src="assets/styles/img/icon/wifi.svg" alt="phone" title="Доступ WiFi"></div>
+                <div class="services-baner__item"><img src="assets/styles/img/icon/coffe.svg" alt="phone" title="Чай-кофе"></div>
+              </div>
+              <p><strong>Телефон:</strong><br><em>+7 (343) 207-89-79</em><br><em>+7 (343) 207-89-79</em><br><em>+7 (343) 206-72-03</em></p><a class="btn btn-success" href="#" role="button" data-toggle="modal" data-target="#modal911"><img class="mr-1" src="assets/styles/img/icon/btn_phone.svg" alt="phone">Закажите звонок</a>
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <div class="text-left text-white">
+              <h5 class="text-uppercase"><img class="mr-1" src="assets/styles/img/icon/loc.svg" alt="phone">Карта проезда</h5>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1101.1656377910515!2d60.23894755833396!3d56.49650437573703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c3e42b287c3d7b%3A0xc1343ee6e5de2958!2z0KAzNTUsIDMsINCf0L7Qu9C10LLRgdC60L7QuSwg0KHQstC10YDQtNC70L7QstGB0LrQsNGPINC-0LHQuy4sIDYyMzM4OA!5e0!3m2!1sru!2sru!4v1522418830005" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      $(document).ready(function () {
+          $("#phone2").mask("+7(999) 999-9999");
+      })
+    </script>
+    <script src="assets/scripts/main.min.js"></script>
+  </body>
+</html>
