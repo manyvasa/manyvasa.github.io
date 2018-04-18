@@ -16,17 +16,18 @@
     <section class="modal-windows">
       <div class="modal fade bd-example-modal-sm" id="modal911" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content backcall">
+          <div class="modal-content callback">
             <div class="modal-body">
               <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">×</span></button><br>
               <div class="row justify-content-center">
                 <div class="col-7">
                   <form id="callback-form" method="POST" autocomplete="off">
-                    <h6 class="callback-form__title">Укажите ваши данные, и мы сразу вам перезвоним!</h6>
-                    <h5 class="callback-form__message"></h5><br>
-                    <input class="backcall_input form-control form-control-lg form-input__name" name="name" type="text" tabindex="0" placeholder="Введите ваше имя" required=""><br>
-                    <input class="backcall_input form-control form-control-lg form-input__phone" id="phone2" name="phone" type="tel" tabindex="0" placeholder="Введите ваш телефон" required=""><br>
-                    <button class="btn btn-block btn-danger btn-lg text-uppercase" type="submit" value="Отправить">Жду звонка!</button>
+                    <h6 class="callback-form__title">Укажите ваши данные, и мы сразу вам перезвоним!</h6><br>
+                    <div class="callback-form__message"></div><br>
+                    <input class="callback_input form-control form-control-lg form-input__name" id="name2" name="name" type="text" maxlength="20" placeholder="Введите ваше имя" required=""><br>
+                    <input class="callback_input form-control form-control-lg form-input__phone" id="phone2" name="phone" type="tel" tabindex="0" placeholder="Введите ваш телефон" required=""><br>
+                    <input class="callback_input form-control form-control-lg form-input__model" id="model2" name="model" type="text" maxlength="40" placeholder="Введите модель авто" required=""><br>
+                    <button class="btn btn-block btn-danger btn-lg text-uppercase" id="btn-cs" type="submit" value="Отправить">Жду звонка!</button>
                   </form>
                 </div>
               </div>
